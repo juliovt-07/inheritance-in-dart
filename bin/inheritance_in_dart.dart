@@ -22,6 +22,12 @@ class Dog extends Animal {
     cuteness += 10;
     print('$name cuteness increased to $cuteness');
   }
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return 'Dog { Name: $name, Weight: $weight }';
+  }
 }
 
 class Cat extends Animal {
@@ -30,6 +36,12 @@ class Cat extends Animal {
   }
 
   Cat(String name, String weight) : super(name, weight);
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return 'Cat { Name: $name, Weight: $weight }';
+  }
 }
 
 void main(List<String> arguments) {
@@ -37,9 +49,11 @@ void main(List<String> arguments) {
   dog1.makeSound();
   dog1.eat();
   dog1.toPlay();
+  print(dog1);
 
   Cat cat1 = new Cat('Goose', '14kg');
   cat1.eat();
   cat1.makeSound();
   print('Is Friendly? ${cat1.isFriendly()}');
+  print(cat1);
 }
